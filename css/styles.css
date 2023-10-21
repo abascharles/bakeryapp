@@ -1,0 +1,325 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8;
+    background-color: #FFF5E1;
+    color: #4B3E39;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    padding-top: 200px;
+}
+
+h1 {
+    font-size: 5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+    color: #D16F52;
+}
+
+h2, h3 {
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: normal;
+    line-height: 1.2;
+    color: #D16F52;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #5c5c5c;
+}
+
+a {
+    transition: color 0.3s ease;
+    color: #5c5c5c;
+}
+
+a:hover {
+    color: #BF784E;
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #E8BFA0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 0.5rem 2rem;
+}
+
+.logo-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.logo {
+    width: 80px;
+}
+
+.sitemap {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    gap: 15px;
+}
+
+.sitemap a {
+    color: #4B3E39;
+    text-decoration: none;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E8BFA0;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px;
+}
+
+.button:hover {
+    background-color: #D16F52;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* Main Content */
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding: 5px;
+    margin-left:3rem ;
+}
+
+.content img,
+.logo {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.content img:hover,
+.logo:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
+
+/* Centering the header text */
+.header-text {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: #D16F52;
+}
+
+.text-section {
+    flex: 0.6;
+    margin-right: 2rem;
+}
+
+.content img {
+    max-width: 40%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #D16F52;
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-left:3rem ;
+}
+
+
+.explore-button:hover {
+    background-color: #BF784E;
+    transform: translateY(-5px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+}
+
+.explore-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Page */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.image-container {
+    width: calc(33.33% - 1rem);
+    text-align: center;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #E8BFA0;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form input[type="password"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form input[type="tel"]:focus,
+.contact-form input[type="password"]:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #ff4500;
+    outline: none;
+}
+
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #ff4500;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #ff6c40;
+}
+
+/* Responsive for smaller devices */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 1rem;
+    }
+}
+
+.business-details {
+    width: 60%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.business-details td {
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #E8BFA0;
+}
+
+.business-details tr:nth-child(even) {
+    background-color: #f7f5e7;
+}
+
+.business-details td:first-child {
+    font-weight: bold;
+    color: #555;
+}
+
+.business-details td:last-child {
+    color: #333;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFF5E1;
+    border-top: 4px solid #D1AFA5;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer a,
+footer p {
+    margin: 0 15px;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
